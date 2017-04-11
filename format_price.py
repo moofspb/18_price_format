@@ -12,7 +12,6 @@ def format_price(price):
     if price and ',' in price:
         price = price.replace(',', '.')
     try:
-        print(price)
         if float(price) >= 0.0:
             return '{:,.0f}'.format(float(price)).replace(',', ' ')
         else:

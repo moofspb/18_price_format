@@ -12,14 +12,15 @@ def format_price(price):
     if price and ',' in price:
         price = price.replace(',', '.')
     try:
+        print(price)
         if float(price) >= 0.0:
             return '{:,.0f}'.format(float(price)).replace(',', ' ')
         else:
-            return 'Negative price!'
+            return '0'
     except ValueError:
-        return 'Incorrect value!'
+        return '0'
     except TypeError:
-        return 'Incorrect type!'
+        return '0'
 
 
 def print_price(raw_price):
